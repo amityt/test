@@ -1,0 +1,38 @@
+apiVersion: litmuchaos.io/v1alpha1
+kind: ChartServiceVersion
+metadata:
+  name: nginx-pod-delete
+  version: 0.1.0
+  annotations:
+    categories: nginx-pod-delete
+    chartDescription: Injects chaos on nginx application
+spec:
+  displayName: nginx-pod-delete
+  categoryDescription: >
+    It Injects pod-delete chaos on the nginx pod
+  experiments:
+    - name: pod-delete
+      description: Deletes nginx pod
+  keywords:
+    - Kubernetes
+    - Pod
+    - nginx
+  platforms:
+    - GKE
+    - Minikube 
+    - Packet(Kubeadm)
+    - EKS
+    - AKS
+  maintainers:
+    - name: ksatchit
+      email: karthik.s@harness.io
+  provider:
+    name: Harness
+  links:
+    - name: Kubernetes Slack
+      url: https://slack.kubernetes.io/
+    - name: Documentation
+      url: https://docs.litmuschaos.io/docs/chaoshub/#generic-chaos
+  icon:
+    - url:
+      mediatype: ""
